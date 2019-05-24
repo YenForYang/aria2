@@ -136,7 +136,7 @@ public:
   virtual std::shared_ptr<Piece> getPiece(size_t index) CXX11_OVERRIDE;
 
   /**
-   * Tells that the download of the specfied piece completes.
+   * Tells that the download of the specified piece completes.
    */
   virtual void
   completePiece(const std::shared_ptr<Piece>& piece) CXX11_OVERRIDE;
@@ -162,11 +162,7 @@ public:
     return totalLength_;
   }
 
-  virtual int64_t getCompletedLength() CXX11_OVERRIDE
-  {
-    // TODO we have to return actual completed length here?
-    return totalLength_;
-  }
+  virtual int64_t getCompletedLength() CXX11_OVERRIDE;
 
   virtual int64_t getFilteredCompletedLength() CXX11_OVERRIDE
   {

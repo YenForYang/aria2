@@ -273,10 +273,6 @@ SRCS =  \
 	EvictSocketPoolCommand.cc EvictSocketPoolCommand.h\
 	libssl_compat.h
 
-if ANDROID
-SRCS += android/android.c
-endif # ANDROID
-
 if MINGW_BUILD
 SRCS += WinConsoleFile.cc WinConsoleFile.h
 endif # MINGW_BUILD
@@ -676,10 +672,6 @@ endif # HAVE_PORT_ASSOCIATE
 if HAVE_KQUEUE
 SRCS += KqueueEventPoll.cc KqueueEventPoll.h
 endif # HAVE_KQUEUE
-
-if HAVE_GETRANDOM_INTERFACE
-SRCS += getrandom_linux.c getrandom_linux.h
-endif # HAVE_GETRANDOM_INTERFACE
 
 if HAVE_LIBUV
 SRCS += LibuvEventPoll.cc LibuvEventPoll.h

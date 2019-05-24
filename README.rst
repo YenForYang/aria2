@@ -169,11 +169,11 @@ JSON-RPC over WebSocket  libnettle or libgcrypt or OpenSSL
 A user can have one of the following configurations for SSL and crypto
 libraries:
 
-* libgcrypt
-* libnettle
 * OpenSSL
 * GnuTLS + libgcrypt
 * GnuTLS + libnettle
+* Apple TLS (OSX only)
+* Windows TLS (Windows only)
 
 You can disable BitTorrent and Metalink support by providing
 ``--disable-bittorrent`` and ``--disable-metalink`` to the configure
@@ -242,7 +242,7 @@ necessary to build the program::
 Also you need `Sphinx <http://sphinx-doc.org/>`_ to build man page.
 
 If you are building aria2 for Mac OS X, take a look at
-the make-release-os.mk GNU Make makefile.
+the makerelease-osx.mk GNU Make makefile.
 
 The quickest way to build aria2 is first run configure script::
 
@@ -359,7 +359,7 @@ Cross-compiling Android binary
 In this section, we describe how to build Android binary using Android
 NDK cross-compiler on Debian Linux.
 
-At the time of this writing, android-ndk-r12b should compile aria2
+At the time of this writing, android-ndk-r14b should compile aria2
 without errors.
 
 ``android-config`` script is a configure script wrapper for Android
